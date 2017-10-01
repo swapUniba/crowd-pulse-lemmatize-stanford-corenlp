@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+sourceCompatibility = 1.8
+
+group = 'com.github.swapUniba'
+version = '0.0.1'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile 'com.github.swapUniba:crowd-pulse-data-java:0.0.1'
+    compile 'com.github.swapUniba:crowd-pulse-lemmatize:0.0.1'
+    compile 'edu.stanford.nlp:stanford-corenlp:3.5.1'
+    compile 'edu.stanford.nlp:stanford-corenlp:3.5.1:models'
+    // TODO: find a way to add Chinese and Spanish models without manually downloading the jars
+    // see http://nlp.stanford.edu/software/corenlp.shtml
+}
